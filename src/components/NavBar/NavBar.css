@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap');
+
+.nav {
+
+  width: 0px; 
+  position: fixed; 
+  top: 50px;
+  left: 30px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.logo-contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%; 
+  gap: 25px;
+}
+
+.nav-link-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.nav-link-container a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: inline;
+  margin: 20px 0; 
+  writing-mode: vertical-rl; 
+  text-orientation: mixed; 
+  transform: rotate(180deg); 
+  width: fit-content;
+}
+
+
+.nav-link-container a::after {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: -5px; /* Ensures it's on the right side of the text */
+  height: 0; /* Initially no underline is shown */
+  width: 4px; /* The thickness of the underline */
+  background-color: orange; /* The color of the underline */
+  transition: height 0.5s ease; /* Animation for the underline */
+}
+
+.nav-link-container a:hover::after {
+  height: 100%; /* Extends the underline across the entire height on hover */
+}
+.nav .contact-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    margin-left: 10px; /* Adjust as needed */
+    writing-mode: horizontal-tb; /* Ensures text is horizontal */
+    transform: none; /* Resets any rotations that may have been applied */
+}
+
+.nav .contact-link::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Starts at the left edge of the .contact-link element */
+  right: 0; /* Stretches to the right edge */
+  bottom: -5px; /* Position at the bottom of the element */
+  height: 4px; /* The thickness of the underline */
+  background-color: orange; /* The color of the underline */
+  transition: all 0.5s ease; /* Smooth transition */
+  width: 0%; /* Start with no underline visible */
+  transform-origin: left center; /* Animation origin */
+}
+
+.nav .contact-link:hover::after {
+  width: 100%; /* Full width on hover, revealing the underline */
+}
+
+
+
+.logo {
+  writing-mode: horizontal-tb !important; /* Ensures text is horizontal */
+  transform: none !important; /* Resets any rotations that may have been applied */
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500; /* Medium weight */
+  font-style: italic; /* Italic style */
+  width: 100px;
+  height: 100px;
+
+}
+
+/* .nav a:hover {
+  background-color: #575757; 
+  border-radius: 4px; 
+  padding: 5px; 
+} */
