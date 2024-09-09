@@ -81,7 +81,6 @@ function hello4(){
         break;
       }
     }
-    console.log(answer)
 
   }
   latestRequest(['item4','item1','item3','item1','item3'],3)
