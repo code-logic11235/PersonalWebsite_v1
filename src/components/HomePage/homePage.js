@@ -145,7 +145,7 @@ function threeNumberSum(array, targetSum) {
   if(array.length < 3){
     return []
   }
-  console.log('hey')
+
   let answer=[]
   for(let i = 0; i<array.length -2;i++){
    for(let j = i+1; j<array.length -1;j++){
@@ -157,7 +157,6 @@ function threeNumberSum(array, targetSum) {
    }
   }
 }
-console.log('hey3')
 
 console.log(answer)
 }
