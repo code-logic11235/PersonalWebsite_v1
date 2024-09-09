@@ -96,7 +96,6 @@ function hello5(){
     }
     for (let i in productSold){
      if (productsMap[productSold[i]] !== soldPrice[i]){
-      // console.log(productsMap[productSold[i]]);
       console.log('i: -> ',i)
       errorCount++;
      }else{
