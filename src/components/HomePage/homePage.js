@@ -169,7 +169,7 @@ const HomePage = () => {
   return (
     <div className = "homepage">
       {/* {hello()} */}
-      {/* <Banner/> */}
+      <Banner/>
     </div>
   );
 };
