@@ -175,14 +175,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-// int findMinimumMoves(string &word){
-//   int moves= 0 ;
-//   unordered map<char,int>cmp;
-//   for ( int i=0; i<word.size(); i++){
-//   cmp[word[i]]++;
-//   for(auto it:cmp)( if(it.second > 1 ) (
-//   moves += (it.second)/2; 
-// }
-//   return moves;
-// }
