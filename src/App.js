@@ -22,11 +22,11 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <AboutMe />
+      {/* <NavBar /> */}
+      {/* <AboutMe /> */}
       <HomePage />
       {/* <div ref={homePageRef}><HomePage /></div>  */}
-      <ContactMe />
+      {/* <ContactMe /> */}
     </div>
   );
 }
