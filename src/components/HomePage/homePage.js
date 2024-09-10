@@ -134,7 +134,7 @@ function hello6(){
       console.log(newArr)
     return newArr;
   }
-  sortedSquaredArray()
+  // sortedSquaredArray()
 }
 function threeNumberSum(array, targetSum) {
   // Write your code here.
@@ -158,9 +158,112 @@ function threeNumberSum(array, targetSum) {
 
 console.log(answer)
 }
-threeNumberSum([12, 3, 1, 2, -6, 5, 0, -8, -1, 6, -5], 0)
+// threeNumberSum([12, 3, 1, 2, -6, 5, 0, -8, -1, 6, -5], 0)
+
+function moveElementToEnd(array, toMove) {
+  // Write your code here.
+  if (array.length === 0){
+    return []
+  }
+  let i = 0, j = array.length-1;
+  // debugger
+  while(i < j && j>i){
+    if(array[i] === toMove){
+      if(array[j] === toMove){
+        j--;
+        continue
+      }else {
+        let temp = array[j];
+        array[j]= toMove;
+        array[i] = temp;
+        j--
+        i++
+        continue
+      }
+      
+    }else {
+      i++
+
+    }
+      
+    
+  }
+  return array
+}
+
+// moveElementToEnd([2,1,2,2,2,3,4,2],2)
+
+function IBMcoding(){
+  let arr= [25,10,20]
+  let sum = []
+  
+ while(arr.length > 1){
+  arr.sort((a,b)=>a-b)
+  let middle = Math.floor(arr.length/2)
+  sum.push(arr[0] + arr[middle])
+
+  arr.splice(0,1,sum[sum.length-1])
+  arr.splice(middle,1)
 
 
+
+  }
+  let total = 0;
+  for(let i in sum){
+    total = total + sum[i]
+  }
+  console.log(total)
+  return total
+
+}
+// IBMcoding(25,10,20);
+
+function findOptimalResources(arr, k) {
+  const n = arr.length;
+
+  if (n < k) return -1; // Not enough elements for the subarray
+
+  let maxSum = -1;
+  let currentSum = 0;
+  let elementCount = {}; // Object to keep track of element counts
+  let left = 0;
+debugger
+  for (let right = 0; right < n; right++) {
+      // Add the new element to the current window
+      if (elementCount[arr[right]] !== undefined) {
+          elementCount[arr[right]] += 1;
+      } else {
+          elementCount[arr[right]] = 1;
+      }
+      currentSum += arr[right];
+
+      // Remove elements from the left if needed to maintain uniqueness
+      while (elementCount[arr[right]] > 1) {
+          elementCount[arr[left]] -= 1;
+          currentSum -= arr[left];
+          left++;
+      }
+
+      // Check if the window has reached size k
+      if (right - left + 1 === k) {
+          // All elements are unique
+          if (Object.keys(elementCount).length === k) {
+              maxSum = Math.max(maxSum, currentSum);
+          }
+          // Remove the element going out of the window
+          elementCount[arr[left]] -= 1;
+          currentSum -= arr[left];
+          left++;
+      }
+  }
+
+  return maxSum === -1 ? -1 : maxSum;
+}
+
+// Test the function with the provided example
+const arr = [1, 2, 7, 7, 4, 3, 6];
+const k = 3;
+console.log(findOptimalResources(arr, k));
 
 const HomePage = () => {
   return (
