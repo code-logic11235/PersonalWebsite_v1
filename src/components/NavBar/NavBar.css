@@ -30,7 +30,7 @@
 .nav-link-container a {
   text-decoration: none;
   font-size: 18px;
-  color: white;
+  color: black;
   display: inline;
   margin: 20px 0; 
   writing-mode: vertical-rl; 
@@ -58,7 +58,7 @@
     position: relative;
     text-decoration: none;
     font-size: 18px;
-    color: white;
+    color: black;
     display: block;
     margin-left: 10px; /* Adjust as needed */
     writing-mode: horizontal-tb; /* Ensures text is horizontal */

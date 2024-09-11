@@ -48,25 +48,18 @@ const Banner = () => {
     return (
         <section className="homepage-banner padding-md" id="banner">
             <Container className='padding-md'>
-                <Row className = "align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                        <span className='tagline'> Welcome to My Porfolio</span>
+                <Row className="align-items-center justify-content-between">
+                    <Col xs={12} md={6} xl={7} id='intro-description'>
+                        <span className='tagline'> Welcome to My Portfolio</span>
                         <h1>{`hi I'm Tai Pham`} <span className='wrap'> {text}</span></h1>
-                        <p> lorem ipsim Design and development for a video game tracking app built in React Native </p>
-                        <button onClick={()=>{console.log('connect')}}>Lets Connect <ArrowRightCircle size={25}></ArrowRightCircle></button>
+                        <p> lorem ipsum Design and development for a video game tracking app built in React Native </p>
+                        <button onClick={() => { console.log('connect') }}>Lets Connect <ArrowRightCircle size={25}></ArrowRightCircle></button>
                     </Col>
-                    <Col xs={12} md={6} xl={5} id='banner-headshot'>
-                        <img id='banner-headshot-img'src="./headshot_v2.svg" alt = "Header Img"></img>
+                    <Col xs={12} md={6} xl={5} id='banner-headshot' className="d-flex justify-content-center">
+                        <img id='banner-headshot-img' src="./headshot_v2.svg" alt="Header Img"></img>
                     </Col>
                 </Row>
-                <Row className = "align-items-center">
-
-                    <Col xs={12} md={6} xl={6} >
-                        <h1> hey</h1>
-                    </Col>
-                    <Col xs={12} md={6} xl={6} >
-                        <h1>hey 2</h1>
-                    </Col>
+                <Row className="align-items-center">
                 </Row>
             </Container>
         </section>

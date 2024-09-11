@@ -22,9 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* <NavBar /> */}
-      {/* <AboutMe /> */}
+      <NavBar />
       <HomePage />
+      <AboutMe />
       {/* <div ref={homePageRef}><HomePage /></div>  */}
       {/* <ContactMe /> */}
     </div>
